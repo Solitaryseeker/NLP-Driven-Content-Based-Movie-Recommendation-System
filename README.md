@@ -33,18 +33,7 @@ This project demonstrates practical implementation of NLP, feature engineering, 
 
 ---
 
-## 📂 Project Structure
 
-```
-NLP-Driven-Content-Based-Movie-Recommendation-System/
-│
-├── movies.csv
-├── credits.csv
-├── copy.ipynb              # Main notebook
-├── app.py                  # (Optional) Deployment script
-├── similarity.pkl          # Saved similarity matrix (if used)
-└── README.md
-```
 
 ---
 
@@ -122,61 +111,10 @@ similarity = cosine_similarity(vectors)
 
 ---
 
-### 5️⃣ Recommendation Function
 
-```python
-def recommend(movie):
-    movie = movie.lower()
-    
-    if movie not in movies['title'].str.lower().values:
-        return "Movie not found!"
-    
-    idx = movies[movies['title'].str.lower() == movie].index[0]
-    distances = list(enumerate(similarity[idx]))
-    
-    distances = sorted(distances, key=lambda x: x[1], reverse=True)[1:6]
-    
-    recommended_movies = []
-    for i in distances:
-        recommended_movies.append(movies.iloc[i[0]].title)
-    
-    return recommended_movies
-```
 
----
 
-## 🎯 Example
 
-```
-Input: "Avatar"
-
-Output:
-- John Carter
-- Guardians of the Galaxy
-- Star Trek
-- The Fifth Element
-- Jupiter Ascending
-```
-
----
-
-## ▶️ How to Run
-
-1. Clone the repository:
-```
-git clone https://github.com/Solitaryseeker/NLP-Driven-Content-Based-Movie-Recommendation-System.git
-```
-
-2. Install dependencies:
-```
-pip install -r requirements.txt
-```
-
-3. Open `copy.ipynb` in Jupyter Notebook
-
-4. Run all cells and test the `recommend()` function
-
----
 
 ## 📈 Future Improvements
 
