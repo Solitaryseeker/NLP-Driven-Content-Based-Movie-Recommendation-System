@@ -12,13 +12,13 @@ This project demonstrates practical implementation of NLP, feature engineering, 
 
 ## 🚀 Key Features
 
-- ✅ Content-based recommendation system
-- ✅ No dependency on user ratings
-- ✅ NLP-powered text processing
-- ✅ TF-IDF / Count Vectorization
-- ✅ Cosine similarity scoring
-- ✅ Clean and modular implementation
-- ✅ Easily extendable for deployment
+-  Content-based recommendation system
+-  No dependency on user ratings
+-  NLP-powered text processing
+-  TF-IDF / Count Vectorization
+-  Cosine similarity scoring
+-  Clean and modular implementation
+-  Easily extendable for deployment
 
 ---
 
